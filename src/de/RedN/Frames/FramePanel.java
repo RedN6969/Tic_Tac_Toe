@@ -224,18 +224,18 @@ public class FramePanel extends JPanel {
         }
 
         else if(
-                Button_A1.getText().isBlank()
-                &&Button_A2.getText().isBlank()
-                &&Button_A3.getText().isBlank()
-                &&Button_B1.getText().isBlank()
-                &&Button_B2.getText().isBlank()
-                &&Button_B3.getText().isBlank()
-                &&Button_C1.getText().isBlank()
-                &&Button_C2.getText().isBlank()
-                &&Button_C3.getText().isBlank()
+                !Button_A1.getText().isBlank()
+                &&!Button_A2.getText().isBlank()
+                &&!Button_A3.getText().isBlank()
+                &&!Button_B1.getText().isBlank()
+                &&!Button_B2.getText().isBlank()
+                &&!Button_B3.getText().isBlank()
+                &&!Button_C1.getText().isBlank()
+                &&!Button_C2.getText().isBlank()
+                &&!Button_C3.getText().isBlank()
         ) {
             end = true;
-            Text.setText("Tie");
+            setText("Tie");
         }
 
     }
