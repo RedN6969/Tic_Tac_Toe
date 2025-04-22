@@ -1,10 +1,10 @@
 package de.RedN.Frames;
 
-import de.RedN.WindowManager.Button.ButtonUI;
 import de.RedN.WindowManager.Button.RButton;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.ArrayList;
 
 public class FramePanel extends JPanel {
 
@@ -24,6 +24,8 @@ public class FramePanel extends JPanel {
     static RButton Button_C1 = new RButton("");
     static RButton Button_C2 = new RButton("");
     static RButton Button_C3 = new RButton("");
+
+    static ArrayList<RButton> Buttons = new ArrayList<>();
 
     public FramePanel() {
 
@@ -47,6 +49,16 @@ public class FramePanel extends JPanel {
         ButtonBounds();
 
         this.setBackground(Color.black);
+
+        Buttons.add(Button_A1);
+        Buttons.add(Button_A2);
+        Buttons.add(Button_A3);
+        Buttons.add(Button_B1);
+        Buttons.add(Button_B2);
+        Buttons.add(Button_B3);
+        Buttons.add(Button_C1);
+        Buttons.add(Button_C2);
+        Buttons.add(Button_C3);
 
         this.setLayout(null);
         this.add(Button_A1);
@@ -83,6 +95,14 @@ public class FramePanel extends JPanel {
         ) {
             end = true;
             setText("X wins");
+
+            for(RButton button : Buttons) {
+                button.setForeground(Color.gray);
+            }
+
+            Button_A1.setForeground(Color.green);
+            Button_A2.setForeground(Color.green);
+            Button_A3.setForeground(Color.green);
         }
 
         else if(
@@ -92,6 +112,14 @@ public class FramePanel extends JPanel {
         ) {
             end = true;
             setText("O wins");
+
+            for(RButton button : Buttons) {
+                button.setForeground(Color.gray);
+            }
+
+            Button_A1.setForeground(Color.green);
+            Button_A2.setForeground(Color.green);
+            Button_A3.setForeground(Color.green);
         }
 
         else if(
@@ -101,6 +129,14 @@ public class FramePanel extends JPanel {
         ) {
             end = true;
             setText("X wins");
+
+            for(RButton button : Buttons) {
+                button.setForeground(Color.gray);
+            }
+
+            Button_B1.setForeground(Color.green);
+            Button_B2.setForeground(Color.green);
+            Button_B3.setForeground(Color.green);
         }
 
         else if(
@@ -110,6 +146,14 @@ public class FramePanel extends JPanel {
         ) {
             end = true;
             setText("O wins");
+
+            for(RButton button : Buttons) {
+                button.setForeground(Color.gray);
+            }
+
+            Button_B1.setForeground(Color.green);
+            Button_B2.setForeground(Color.green);
+            Button_B3.setForeground(Color.green);
         }
 
         else if(
@@ -119,6 +163,14 @@ public class FramePanel extends JPanel {
         ) {
             end = true;
             setText("X wins");
+
+            for(RButton button : Buttons) {
+                button.setForeground(Color.gray);
+            }
+
+            Button_C1.setForeground(Color.green);
+            Button_C2.setForeground(Color.green);
+            Button_C3.setForeground(Color.green);
         }
 
         else if(
@@ -128,6 +180,14 @@ public class FramePanel extends JPanel {
         ) {
             end = true;
             setText("O wins");
+
+            for(RButton button : Buttons) {
+                button.setForeground(Color.gray);
+            }
+
+            Button_C1.setForeground(Color.green);
+            Button_C2.setForeground(Color.green);
+            Button_C3.setForeground(Color.green);
         }
 
         else if(
@@ -137,6 +197,14 @@ public class FramePanel extends JPanel {
         ) {
             end = true;
             setText("X wins");
+
+            for(RButton button : Buttons) {
+                button.setForeground(Color.gray);
+            }
+
+            Button_A1.setForeground(Color.green);
+            Button_B2.setForeground(Color.green);
+            Button_C3.setForeground(Color.green);
         }
 
         else if(
@@ -146,6 +214,14 @@ public class FramePanel extends JPanel {
         ) {
             end = true;
             setText("X wins");
+
+            for(RButton button : Buttons) {
+                button.setForeground(Color.gray);
+            }
+
+            Button_A1.setForeground(Color.green);
+            Button_B1.setForeground(Color.green);
+            Button_C1.setForeground(Color.green);
         }
 
         else if(
@@ -155,6 +231,14 @@ public class FramePanel extends JPanel {
         ) {
             end = true;
             setText("O wins");
+
+            for(RButton button : Buttons) {
+                button.setForeground(Color.gray);
+            }
+
+            Button_A1.setForeground(Color.green);
+            Button_B1.setForeground(Color.green);
+            Button_C1.setForeground(Color.green);
         }
 
         else if(
@@ -164,6 +248,14 @@ public class FramePanel extends JPanel {
         ) {
             end = true;
             setText("X wins");
+
+            for(RButton button : Buttons) {
+                button.setForeground(Color.gray);
+            }
+
+            Button_A2.setForeground(Color.green);
+            Button_B2.setForeground(Color.green);
+            Button_C2.setForeground(Color.green);
         }
 
         else if(
@@ -173,6 +265,14 @@ public class FramePanel extends JPanel {
         ) {
             end = true;
             setText("O wins");
+
+            for(RButton button : Buttons) {
+                button.setForeground(Color.gray);
+            }
+
+            Button_A2.setForeground(Color.green);
+            Button_B2.setForeground(Color.green);
+            Button_C2.setForeground(Color.green);
         }
 
         else if(
@@ -182,6 +282,14 @@ public class FramePanel extends JPanel {
         ) {
             end = true;
             setText("X wins");
+
+            for(RButton button : Buttons) {
+                button.setForeground(Color.gray);
+            }
+
+            Button_A3.setForeground(Color.green);
+            Button_B3.setForeground(Color.green);
+            Button_C3.setForeground(Color.green);
         }
 
         else if(
@@ -191,6 +299,14 @@ public class FramePanel extends JPanel {
         ) {
             end = true;
             setText("O wins");
+
+            for(RButton button : Buttons) {
+                button.setForeground(Color.gray);
+            }
+
+            Button_A3.setForeground(Color.green);
+            Button_B3.setForeground(Color.green);
+            Button_C3.setForeground(Color.green);
         }
 
         else if(
@@ -200,6 +316,14 @@ public class FramePanel extends JPanel {
         ) {
             end = true;
             setText("O wins");
+
+            for(RButton button : Buttons) {
+                button.setForeground(Color.gray);
+            }
+
+            Button_A1.setForeground(Color.green);
+            Button_B2.setForeground(Color.green);
+            Button_C3.setForeground(Color.green);
         }
 
         else if(
@@ -209,6 +333,14 @@ public class FramePanel extends JPanel {
         ) {
             end = true;
             setText("X wins");
+
+            for(RButton button : Buttons) {
+                button.setForeground(Color.gray);
+            }
+
+            Button_C1.setForeground(Color.green);
+            Button_B2.setForeground(Color.green);
+            Button_A3.setForeground(Color.green);
         }
 
         else if(
@@ -218,6 +350,14 @@ public class FramePanel extends JPanel {
         ) {
             end = true;
             setText("O wins");
+
+            for(RButton button : Buttons) {
+                button.setForeground(Color.gray);
+            }
+
+            Button_C1.setForeground(Color.green);
+            Button_B2.setForeground(Color.green);
+            Button_A3.setForeground(Color.green);
         }
 
         else if(
@@ -233,6 +373,10 @@ public class FramePanel extends JPanel {
         ) {
             end = true;
             setText("Tie");
+
+            for(RButton button : Buttons) {
+                button.setForeground(Color.gray);
+            }
         }
 
     }
