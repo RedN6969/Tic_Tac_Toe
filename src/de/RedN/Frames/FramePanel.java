@@ -6,6 +6,7 @@ import de.RedN.WindowManager.Button.RButton;
 import javax.swing.*;
 import java.awt.*;
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class FramePanel extends JPanel {
 
@@ -112,9 +113,9 @@ public class FramePanel extends JPanel {
     public void WinCheck() {
 
         if(
-                Button_A1.getText() == "X"
-                        &&Button_A2.getText() == "X"
-                        &&Button_A3.getText() == "X"
+                Objects.equals(Button_A1.getText(), "X")
+                        && Objects.equals(Button_A2.getText(), "X")
+                        && Objects.equals(Button_A3.getText(), "X")
         ) {
             end = true;
             win("X wins");
@@ -129,9 +130,9 @@ public class FramePanel extends JPanel {
         }
 
         else if(
-                Button_A1.getText() == "O"
-                        &&Button_A2.getText() == "O"
-                        &&Button_A3.getText() == "O"
+                Objects.equals(Button_A1.getText(), "O")
+                        && Objects.equals(Button_A2.getText(), "O")
+                        && Objects.equals(Button_A3.getText(), "O")
         ) {
             end = true;
             win("O wins");
@@ -146,9 +147,9 @@ public class FramePanel extends JPanel {
         }
 
         else if(
-                Button_B1.getText() == "X"
-                        &&Button_B2.getText() == "X"
-                        &&Button_B3.getText() == "X"
+                Objects.equals(Button_B1.getText(), "X")
+                        && Objects.equals(Button_B2.getText(), "X")
+                        && Objects.equals(Button_B3.getText(), "X")
         ) {
             end = true;
             win("X wins");
@@ -163,9 +164,9 @@ public class FramePanel extends JPanel {
         }
 
         else if(
-                Button_B1.getText() == "O"
-                        &&Button_B2.getText() == "O"
-                        &&Button_B3.getText() == "O"
+                Objects.equals(Button_B1.getText(), "O")
+                        && Objects.equals(Button_B2.getText(), "O")
+                        && Objects.equals(Button_B3.getText(), "O")
         ) {
             end = true;
             win("O wins");
@@ -180,9 +181,9 @@ public class FramePanel extends JPanel {
         }
 
         else if(
-                Button_C1.getText() == "X"
-                        &&Button_C2.getText() == "X"
-                        &&Button_C3.getText() == "X"
+                Objects.equals(Button_C1.getText(), "X")
+                        && Objects.equals(Button_C2.getText(), "X")
+                        && Objects.equals(Button_C3.getText(), "X")
         ) {
             end = true;
             win("X wins");
@@ -197,9 +198,9 @@ public class FramePanel extends JPanel {
         }
 
         else if(
-                Button_C1.getText() == "O"
-                        &&Button_C2.getText() == "O"
-                        &&Button_C3.getText() == "O"
+                Objects.equals(Button_C1.getText(), "O")
+                        && Objects.equals(Button_C2.getText(), "O")
+                        && Objects.equals(Button_C3.getText(), "O")
         ) {
             end = true;
             win("O wins");
@@ -214,9 +215,9 @@ public class FramePanel extends JPanel {
         }
 
         else if(
-                Button_A1.getText() == "X"
-                        &&Button_B2.getText() == "X"
-                        &&Button_C3.getText() == "X"
+                Objects.equals(Button_A1.getText(), "X")
+                        && Objects.equals(Button_B2.getText(), "X")
+                        && Objects.equals(Button_C3.getText(), "X")
         ) {
             end = true;
             win("X wins");
@@ -231,9 +232,9 @@ public class FramePanel extends JPanel {
         }
 
         else if(
-                Button_A1.getText() == "X"
-                        &&Button_B1.getText() == "X"
-                        &&Button_C1.getText() == "X"
+                Objects.equals(Button_A1.getText(), "X")
+                        && Objects.equals(Button_B1.getText(), "X")
+                        && Objects.equals(Button_C1.getText(), "X")
         ) {
             end = true;
             win("X wins");
@@ -248,9 +249,9 @@ public class FramePanel extends JPanel {
         }
 
         else if(
-                Button_A1.getText() == "O"
-                        &&Button_B1.getText() == "O"
-                        &&Button_C1.getText() == "O"
+                Objects.equals(Button_A1.getText(), "O")
+                        && Objects.equals(Button_B1.getText(), "O")
+                        && Objects.equals(Button_C1.getText(), "O")
         ) {
             end = true;
             win("O wins");
@@ -265,9 +266,9 @@ public class FramePanel extends JPanel {
         }
 
         else if(
-                Button_A2.getText() == "X"
-                        &&Button_B2.getText() == "X"
-                        &&Button_C2.getText() == "X"
+                Objects.equals(Button_A2.getText(), "X")
+                        && Objects.equals(Button_B2.getText(), "X")
+                        && Objects.equals(Button_C2.getText(), "X")
         ) {
             end = true;
             win("X wins");
@@ -282,9 +283,9 @@ public class FramePanel extends JPanel {
         }
 
         else if(
-                Button_A2.getText() == "O"
-                        &&Button_B2.getText() == "O"
-                        &&Button_C2.getText() == "O"
+                Objects.equals(Button_A2.getText(), "O")
+                        && Objects.equals(Button_B2.getText(), "O")
+                        && Objects.equals(Button_C2.getText(), "O")
         ) {
             end = true;
             win("O wins");
@@ -299,9 +300,9 @@ public class FramePanel extends JPanel {
         }
 
         else if(
-                Button_A3.getText() == "X"
-                        &&Button_B3.getText() == "X"
-                        &&Button_C3.getText() == "X"
+                Objects.equals(Button_A3.getText(), "X")
+                        && Objects.equals(Button_B3.getText(), "X")
+                        && Objects.equals(Button_C3.getText(), "X")
         ) {
             end = true;
             win("X wins");
@@ -316,9 +317,9 @@ public class FramePanel extends JPanel {
         }
 
         else if(
-                Button_A3.getText() == "O"
-                        &&Button_B3.getText() == "O"
-                        &&Button_C3.getText() == "O"
+                Objects.equals(Button_A3.getText(), "O")
+                        && Objects.equals(Button_B3.getText(), "O")
+                        && Objects.equals(Button_C3.getText(), "O")
         ) {
             end = true;
             win("O wins");
@@ -333,9 +334,9 @@ public class FramePanel extends JPanel {
         }
 
         else if(
-                Button_A1.getText() == "O"
-                        &&Button_B2.getText() == "O"
-                        &&Button_C3.getText() == "O"
+                Objects.equals(Button_A1.getText(), "O")
+                        && Objects.equals(Button_B2.getText(), "O")
+                        && Objects.equals(Button_C3.getText(), "O")
         ) {
             end = true;
             win("O wins");
@@ -350,9 +351,9 @@ public class FramePanel extends JPanel {
         }
 
         else if(
-                Button_C1.getText() == "X"
-                        &&Button_B2.getText() == "X"
-                        &&Button_A3.getText() == "X"
+                Objects.equals(Button_C1.getText(), "X")
+                        && Objects.equals(Button_B2.getText(), "X")
+                        && Objects.equals(Button_A3.getText(), "X")
         ) {
             end = true;
             win("X wins");
@@ -367,9 +368,9 @@ public class FramePanel extends JPanel {
         }
 
         else if(
-                Button_C1.getText() == "O"
-                        &&Button_B2.getText() == "O"
-                        &&Button_A3.getText() == "O"
+                Objects.equals(Button_C1.getText(), "O")
+                        && Objects.equals(Button_B2.getText(), "O")
+                        && Objects.equals(Button_A3.getText(), "O")
         ) {
             end = true;
             win("O wins");
