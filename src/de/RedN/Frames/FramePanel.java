@@ -5,6 +5,8 @@ import de.RedN.WindowManager.Button.RButton;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.util.ArrayList;
 import java.util.Objects;
 
@@ -476,8 +478,8 @@ public class FramePanel extends JPanel {
                 Restart_Button.getPreferredSize().height
         );
 
-        Restart_Button.setForeground(Color.darkGray);
-        Restart_Button.setBackground(Color.gray);
+        Restart_Button.setForeground(Color.gray);
+        Restart_Button.setBackground(Color.darkGray);
         Restart_Button.setUI(new ButtonUI(Color.darkGray, Color.gray));
         Restart_Button.setBorderPainted(false);
         Restart_Button.setFocusPainted(false);
