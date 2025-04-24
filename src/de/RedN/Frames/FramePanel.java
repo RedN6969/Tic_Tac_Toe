@@ -1,5 +1,6 @@
 package de.RedN.Frames;
 
+import de.RedN.WindowManager.Button.ButtonUI;
 import de.RedN.WindowManager.Button.RButton;
 
 import javax.swing.*;
@@ -15,17 +16,19 @@ public class FramePanel extends JPanel {
 
     private static Dimension Size = null;
 
-    static RButton Button_A1 = new RButton("");
-    static RButton Button_A2 = new RButton("");
-    static RButton Button_B1 = new RButton("");
-    static RButton Button_A3 = new RButton("");
-    static RButton Button_B2 = new RButton("");
-    static RButton Button_B3 = new RButton("");
-    static RButton Button_C1 = new RButton("");
-    static RButton Button_C2 = new RButton("");
-    static RButton Button_C3 = new RButton("");
+    static final RButton Button_A1 = new RButton("");
+    static final RButton Button_A2 = new RButton("");
+    static final RButton Button_B1 = new RButton("");
+    static final RButton Button_A3 = new RButton("");
+    static final RButton Button_B2 = new RButton("");
+    static final RButton Button_B3 = new RButton("");
+    static final RButton Button_C1 = new RButton("");
+    static final RButton Button_C2 = new RButton("");
+    static final RButton Button_C3 = new RButton("");
 
-    static ArrayList<RButton> Buttons = new ArrayList<>();
+    final JButton Restart_Button = new JButton();
+
+    static final ArrayList<RButton> Buttons = new ArrayList<>();
 
     public FramePanel() {
 
@@ -48,6 +51,8 @@ public class FramePanel extends JPanel {
 
         ButtonBounds();
 
+        RestartButton_Setup();
+
         this.setBackground(Color.black);
 
         Buttons.add(Button_A1);
@@ -59,6 +64,22 @@ public class FramePanel extends JPanel {
         Buttons.add(Button_C1);
         Buttons.add(Button_C2);
         Buttons.add(Button_C3);
+
+        for(RButton button : Buttons) {
+
+            button.addActionListener(e -> {
+                if(button.getText().isBlank() && !end) {
+                    clicks++;
+                    if(clicks % 2 == 0) {
+                        button.setText("O");
+                    } else {
+                        button.setText("X");
+                    }
+                    WinCheck();
+                }
+            });
+
+        }
 
         this.setLayout(null);
         this.add(Button_A1);
@@ -74,7 +95,7 @@ public class FramePanel extends JPanel {
 
     }
 
-    private static void setText(String text) {
+    private void win(String text) {
 
         Text.setText(text);
         Text.setBounds(
@@ -84,17 +105,19 @@ public class FramePanel extends JPanel {
                 Text.getPreferredSize().height
         );
 
+        this.add(Restart_Button);
+
     }
 
-    public static void WinCheck() {
+    public void WinCheck() {
 
         if(
                 Button_A1.getText() == "X"
-                &&Button_A2.getText() == "X"
-                &&Button_A3.getText() == "X"
+                        &&Button_A2.getText() == "X"
+                        &&Button_A3.getText() == "X"
         ) {
             end = true;
-            setText("X wins");
+            win("X wins");
 
             for(RButton button : Buttons) {
                 button.setForeground(Color.gray);
@@ -111,7 +134,7 @@ public class FramePanel extends JPanel {
                         &&Button_A3.getText() == "O"
         ) {
             end = true;
-            setText("O wins");
+            win("O wins");
 
             for(RButton button : Buttons) {
                 button.setForeground(Color.gray);
@@ -128,7 +151,7 @@ public class FramePanel extends JPanel {
                         &&Button_B3.getText() == "X"
         ) {
             end = true;
-            setText("X wins");
+            win("X wins");
 
             for(RButton button : Buttons) {
                 button.setForeground(Color.gray);
@@ -145,7 +168,7 @@ public class FramePanel extends JPanel {
                         &&Button_B3.getText() == "O"
         ) {
             end = true;
-            setText("O wins");
+            win("O wins");
 
             for(RButton button : Buttons) {
                 button.setForeground(Color.gray);
@@ -162,7 +185,7 @@ public class FramePanel extends JPanel {
                         &&Button_C3.getText() == "X"
         ) {
             end = true;
-            setText("X wins");
+            win("X wins");
 
             for(RButton button : Buttons) {
                 button.setForeground(Color.gray);
@@ -179,7 +202,7 @@ public class FramePanel extends JPanel {
                         &&Button_C3.getText() == "O"
         ) {
             end = true;
-            setText("O wins");
+            win("O wins");
 
             for(RButton button : Buttons) {
                 button.setForeground(Color.gray);
@@ -196,7 +219,7 @@ public class FramePanel extends JPanel {
                         &&Button_C3.getText() == "X"
         ) {
             end = true;
-            setText("X wins");
+            win("X wins");
 
             for(RButton button : Buttons) {
                 button.setForeground(Color.gray);
@@ -213,7 +236,7 @@ public class FramePanel extends JPanel {
                         &&Button_C1.getText() == "X"
         ) {
             end = true;
-            setText("X wins");
+            win("X wins");
 
             for(RButton button : Buttons) {
                 button.setForeground(Color.gray);
@@ -230,7 +253,7 @@ public class FramePanel extends JPanel {
                         &&Button_C1.getText() == "O"
         ) {
             end = true;
-            setText("O wins");
+            win("O wins");
 
             for(RButton button : Buttons) {
                 button.setForeground(Color.gray);
@@ -247,7 +270,7 @@ public class FramePanel extends JPanel {
                         &&Button_C2.getText() == "X"
         ) {
             end = true;
-            setText("X wins");
+            win("X wins");
 
             for(RButton button : Buttons) {
                 button.setForeground(Color.gray);
@@ -264,7 +287,7 @@ public class FramePanel extends JPanel {
                         &&Button_C2.getText() == "O"
         ) {
             end = true;
-            setText("O wins");
+            win("O wins");
 
             for(RButton button : Buttons) {
                 button.setForeground(Color.gray);
@@ -281,7 +304,7 @@ public class FramePanel extends JPanel {
                         &&Button_C3.getText() == "X"
         ) {
             end = true;
-            setText("X wins");
+            win("X wins");
 
             for(RButton button : Buttons) {
                 button.setForeground(Color.gray);
@@ -298,7 +321,7 @@ public class FramePanel extends JPanel {
                         &&Button_C3.getText() == "O"
         ) {
             end = true;
-            setText("O wins");
+            win("O wins");
 
             for(RButton button : Buttons) {
                 button.setForeground(Color.gray);
@@ -315,7 +338,7 @@ public class FramePanel extends JPanel {
                         &&Button_C3.getText() == "O"
         ) {
             end = true;
-            setText("O wins");
+            win("O wins");
 
             for(RButton button : Buttons) {
                 button.setForeground(Color.gray);
@@ -332,7 +355,7 @@ public class FramePanel extends JPanel {
                         &&Button_A3.getText() == "X"
         ) {
             end = true;
-            setText("X wins");
+            win("X wins");
 
             for(RButton button : Buttons) {
                 button.setForeground(Color.gray);
@@ -349,7 +372,7 @@ public class FramePanel extends JPanel {
                         &&Button_A3.getText() == "O"
         ) {
             end = true;
-            setText("O wins");
+            win("O wins");
 
             for(RButton button : Buttons) {
                 button.setForeground(Color.gray);
@@ -362,17 +385,17 @@ public class FramePanel extends JPanel {
 
         else if(
                 !Button_A1.getText().isBlank()
-                &&!Button_A2.getText().isBlank()
-                &&!Button_A3.getText().isBlank()
-                &&!Button_B1.getText().isBlank()
-                &&!Button_B2.getText().isBlank()
-                &&!Button_B3.getText().isBlank()
-                &&!Button_C1.getText().isBlank()
-                &&!Button_C2.getText().isBlank()
-                &&!Button_C3.getText().isBlank()
+                        &&!Button_A2.getText().isBlank()
+                        &&!Button_A3.getText().isBlank()
+                        &&!Button_B1.getText().isBlank()
+                        &&!Button_B2.getText().isBlank()
+                        &&!Button_B3.getText().isBlank()
+                        &&!Button_C1.getText().isBlank()
+                        &&!Button_C2.getText().isBlank()
+                        &&!Button_C3.getText().isBlank()
         ) {
             end = true;
-            setText("Tie");
+            win("Tie");
 
             for(RButton button : Buttons) {
                 button.setForeground(Color.gray);
@@ -437,6 +460,43 @@ public class FramePanel extends JPanel {
                 200,
                 200
         );
+
+    }
+
+    private void RestartButton_Setup() {
+
+        Restart_Button.setText("Restart");
+        Restart_Button.setFont(new Font("Arial", Font.PLAIN, 30));
+
+        Restart_Button.setBounds(
+                (this.getPreferredSize().width - Restart_Button.getPreferredSize().width),
+                (100 - Restart_Button.getPreferredSize().height) / 2,
+                Restart_Button.getPreferredSize().width,
+                Restart_Button.getPreferredSize().height
+        );
+
+        Restart_Button.setForeground(Color.darkGray);
+        Restart_Button.setBackground(Color.gray);
+        Restart_Button.setUI(new ButtonUI(Color.darkGray, Color.gray));
+        Restart_Button.setBorderPainted(false);
+        Restart_Button.setFocusPainted(false);
+
+        Restart_Button.addActionListener(e -> {
+
+            for(RButton button : Buttons) {
+
+                button.setForeground(Color.red);
+                button.setText("");
+                clicks = 0;
+
+            }
+
+            end = false;
+            win("Tic Tac Toe");
+
+            this.remove(Restart_Button);
+
+        });
 
     }
 }

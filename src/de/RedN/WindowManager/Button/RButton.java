@@ -18,17 +18,5 @@ public class RButton extends JButton {
         this.setBorderPainted(false);
         this.setFocusPainted(false);
 
-        this.addActionListener(e -> {
-            if(this.getText().isBlank() && !FramePanel.end) {
-                FramePanel.clicks++;
-                if(FramePanel.clicks % 2 == 0) {
-                    this.setText("O");
-                } else {
-                    this.setText("X");
-                }
-                FramePanel.WinCheck();
-            }
-        });
-
     }
 }
