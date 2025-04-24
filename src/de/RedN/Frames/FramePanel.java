@@ -473,7 +473,7 @@ public class FramePanel extends JPanel {
 
         Restart_Button.setBounds(
                 (this.getPreferredSize().width - Restart_Button.getPreferredSize().width),
-                (100 - Restart_Button.getPreferredSize().height) / 2,
+                100 - Restart_Button.getPreferredSize().height,
                 Restart_Button.getPreferredSize().width,
                 Restart_Button.getPreferredSize().height
         );
