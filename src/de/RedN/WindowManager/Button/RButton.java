@@ -1,7 +1,5 @@
 package de.RedN.WindowManager.Button;
 
-import de.RedN.Frames.FramePanel;
-
 import javax.swing.*;
 import java.awt.*;
 
