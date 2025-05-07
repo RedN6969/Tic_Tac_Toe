@@ -5,8 +5,6 @@ import de.RedN.WindowManager.Button.RButton;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
 import java.util.ArrayList;
 import java.util.Objects;
 
